@@ -12,7 +12,7 @@ try: # 尝试读取排除规则列表
 except Exception as e: # 若读取失败
 	print('读取排除规则列表失败！')
 	print(e)
-	sys.exit(0)
+	sys.exit(1)
 
 
 
@@ -27,7 +27,7 @@ try: # 尝试获取文件列表
 except Exception as e: # 若获取失败
 	print('获取文件列表失败！')
 	print(e)
-	sys.exit(0)
+	sys.exit(1)
 
 
 if files == []:
@@ -59,11 +59,14 @@ try: # 尝试复制文件
 		except Exception as e:
 			print('压缩失败！')
 			print(e)
+			sys.exit(1)
 		finally:
 			f.close()
 	except Exception as e:
 		print('压缩失败！')
 		print(e)
+		sys.exit(1)
+
 except Exception as e:
 	print('复制文件失败！')
 	print(e)

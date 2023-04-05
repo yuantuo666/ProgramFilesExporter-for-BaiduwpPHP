@@ -12,5 +12,7 @@
 	"^update\\.json$",
 	"^cache(/.*)?$",
 	"^config(/.*)?$",
-	"^update(/.*)?$"
+	"^update(/.*)?$",
+	"^.*\\docs$",
+	"^Dockerfile$"
 ]
