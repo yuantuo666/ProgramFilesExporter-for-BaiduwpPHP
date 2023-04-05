@@ -4,8 +4,6 @@ import os, re, shutil, sys, zipfile
 from os import path
 
 
-
-
 try: # 尝试读取排除规则列表
 	with open('./exclude-list.json', encoding="utf-8") as f:
 		excludeList = loadJSON(f)
@@ -13,7 +11,6 @@ except Exception as e: # 若读取失败
 	print('读取排除规则列表失败！')
 	print(e)
 	sys.exit(1)
-
 
 
 files = []
@@ -72,3 +69,4 @@ except Exception as e:
 	print(e)
 	print('您可以自行复制这些文件：')
 	print(dumpsJSON(files))
+	sys.exit(1)
