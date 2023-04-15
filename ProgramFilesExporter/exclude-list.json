@@ -13,6 +13,7 @@
 	"^cache(/.*)?$",
 	"^config(/.*)?$",
 	"^update(/.*)?$",
-	"^.*\\docs$",
-	"^Dockerfile$"
+	"^docs$",
+	"^Dockerfile$",
+	"^.*\\.db$"
 ]
